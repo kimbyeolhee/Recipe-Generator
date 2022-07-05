@@ -17,9 +17,9 @@
 ### 사용할 데이터셋과 모델
 - 모델: KoGPT2      
 - 데이터셋:  - 데이터 파일 형식: .txt  
-- 데이터 출처: [해먹남녀](https://haemukja.com/) , [만개의레시피](https://www.10000recipe.com/), [메뉴판닷컴](https://www.menupan.com/) , [공공데이터포털](https://www.data.go.kr/), [오늘의 식탁], [이밥차], [농수산림식품 레시피 데이터셋] 으로부터 레시피 데이터를 크롤링하여 구성
+- 데이터 출처: [해먹남녀](https://haemukja.com/) , [만개의레시피](https://www.10000recipe.com/), [메뉴판닷컴](https://www.menupan.com/) , [공공데이터포털](https://www.data.go.kr/), [오늘의 식탁](https://wtable.co.kr/store), [이밥차](https://2bob.co.kr/), [농수산림식품 레시피 데이터셋](https://kadx.co.kr/product/detail/0c5ec800-4fc2-11eb-8b6e-e776ccea3964) 으로부터 레시피 데이터를 크롤링하여 구성
  - train data: 22099개 / test data: 2181개 / valid data: 2181개 
-- 데이터 형태: 모델이 요리 이름/재료/레시피의 경계를 명확히 알 수 있도록 토큰 삽입  <br/>                       <unused0> : 요리 이름 시작, <unused1> : 요리 이름 끝, <unused2>: 재료 시작, <unused3>: 재료 끝, <unused4>: 레시피 본문 시작, <unused5>: 레시피 본문 끝  <br/>
+- 데이터 형태: 모델이 요리 이름/재료/레시피의 경계를 명확히 학습할 수 있도록 토큰 삽입  <br/>                       <unused0> : 요리 이름 시작, <unused1> : 요리 이름 끝, <unused2>: 재료 시작, <unused3>: 재료 끝, <unused4>: 레시피 본문 시작, <unused5>: 레시피 본문 끝  <br/>
 '$’ 문자로 재료를 구분  <br/>                        
 ```<unused0>칼륨 듬뿍 고구마죽<unused1><unused2>고구마$설탕$찹쌀$가루$물$잣$<unused3><unused4>고구마는 깨끗이 씻어서 껍질을 벗기고 4 정도로 잘라준다. 찜기에 고구마를 넣고 20-30분 정도 삶아 주고 블렌더나 체를 이용하여 잘 으 깨어 곱게 만든다. 고구마와 물을 섞어 끓이면서 찹쌀가루로 농도를 맞추고 설탕을 넣어 맛을 낸다. 잣을 팬에 노릇하게 볶아 다져서 고구마 죽에 섞는다. 기호에 따라 고구마를 튀겨 얹어 먹어도 좋다.<unused5>```
 
